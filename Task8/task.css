@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf0;
+  color: #263238;
+}
+
+nav {
+  background: #29235c;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav h2 {
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: #ffd166;
+  transform: translateY(-3px);
+}
+
+.hero {
+  min-height: 540px;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(120deg, #5146c7, #087f9c, #16a085);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+  animation: heroIn 1s ease;
+}
+
+.tag {
+  display: inline-block;
+  background: #ffd166;
+  color: #4a3212;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: tagPop 1s ease 0.3s both;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.6;
+  max-width: 570px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 24px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #ff4757;
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px #253b80;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: float 5s ease-in-out infinite;
+}
+
+.circle-one {
+  width: 180px;
+  height: 180px;
+  background: #ffd166;
+  right: 12%;
+  top: 18%;
+}
+
+.circle-two {
+  width: 100px;
+  height: 100px;
+  background: #ff6b6b;
+  right: 25%;
+  bottom: 12%;
+  animation-delay: 1s;
+}
+
+.places {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.section-title {
+  color: #f05d23;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.places h2 {
+  color: #29235c;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  text-align: left;
+  padding: 28px;
+  border-radius: 15px;
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s;
+  animation: cardIn 0.8s ease both;
+}
+
+.card:hover {
+  transform: translateY(-12px) rotate(1deg);
+  box-shadow: 0 15px 30px #c8c8c8;
+}
+
+.manali {
+  background: #dff4ff;
+  border-top: 6px solid #2196f3;
+}
+
+.goa {
+  background: #ffe3ed;
+  border-top: 6px solid #ff5c8a;
+  animation-delay: 0.2s;
+}
+
+.jaipur {
+  background: #fff0c9;
+  border-top: 6px solid #f59e0b;
+  animation-delay: 0.4s;
+}
+
+.place-icon {
+  font-size: 50px;
+  transition: transform 0.4s;
+}
+
+.card:hover .place-icon {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.card span {
+  display: inline-block;
+  margin-top: 18px;
+  color: #666;
+  font-size: 13px;
+}
+
+.card h3 {
+  font-size: 27px;
+  margin: 8px 0 12px;
+}
+
+.manali h3 {
+  color: #1769aa;
+}
+
+.goa h3 {
+  color: #d6336c;
+}
+
+.jaipur h3 {
+  color: #b45309;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #29235c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  transform: translateX(7px);
+  color: #f05d23;
+}
+
+.contact {
+  padding: 75px 20px;
+  text-align: center;
+  background: #d9f7e8;
+}
+
+.contact h2 {
+  color: #146c43;
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+.contact p {
+  color: #356b50;
+}
+
+.contact button {
+  margin-top: 25px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 7px;
+  background: #f05d23;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #d9480f;
+  transform: scale(1.08);
+  box-shadow: 0 7px 15px #a9cdb8;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #29235c;
+  color: white;
+}
+
+footer p {
+  margin: 7px 0 12px;
+  color: #d8d5ff;
+}
+
+footer small {
+  color: #aaa7d5;
+}
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tagPop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    margin: 0 8px;
+  }
+
+  .hero {
+    padding: 80px 8%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-circle {
+    display: none;
+  }
+}
